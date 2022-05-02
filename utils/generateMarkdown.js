@@ -77,13 +77,13 @@ function renderLicenseSection(license) {
   return ((license === 'No License') 
   ? 
   `
-  ##License
+  ## License
 
   This code is not protected under any License.
   `
   : 
   `
-  ##License
+  ## License
   
   This code is under ${license} license. In order to know what you can and can't do with this code, we recommend to visit the following link [${license}](${link}).
   `)
@@ -93,6 +93,31 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
+
+  ## Description
+  
+  ${data.description}
+
+  ## Table of Contents
+
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Credits](credits)
+    - [License](license)
+  
+  ## Installation
+
+  ${data.installation}
+
+  ## Usage
+
+  ${data.usage}
+
+  ## Credits
+
+  ${data.credits}
+
+  ${renderLicenseSection(data.license)}
 
 `;
 }
