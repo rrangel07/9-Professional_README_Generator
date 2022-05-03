@@ -76,49 +76,56 @@ function renderLicenseSection(license) {
   const link= renderLicenseLink(license);
   return ((license === 'No License') 
   ? 
-  `
-  ## License
+`
+## License
 
-  This code is not protected under any License.
-  `
+This code is not protected under any License.
+`
   : 
-  `
-  ## License
-  
-  This code is under ${license} license. In order to know what you can and can't do with this code, we recommend to visit the following link [${license}](${link}).
-  `)
+`
+## License
+
+This code is under ${license} license. In order to know what you can and can't do with this code, we recommend to visit the following link [${license}](${link}).
+`
+  )
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-  # ${data.title}
+return `
+# ${data.title} [${renderLicenseBadge(data.license)}](${renderLicenseLink(data.license)})
 
-  ## Description
-  
-  ${data.description}
+## Description
 
-  ## Table of Contents
+${data.description}
 
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](credits)
-    - [License](license)
-  
-  ## Installation
+## Table of Contents
 
-  ${data.installation}
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
 
-  ## Usage
+## Installation
 
-  ${data.usage}
+${data.installation}
 
-  ## Credits
+## Usage
 
-  ${data.credits}
+${data.usage}
 
-  ${renderLicenseSection(data.license)}
+## Credits
+
+${data.contribuitors}
+
+${renderLicenseSection(data.license)}
 
 `;
 }
-module.exports = generateMarkdown;
+module.exports = {
+  renderLicenseBadge,
+  renderLicenseLink,
+  renderLicenseSection,
+  generateMarkdown,
+};
+
