@@ -34,11 +34,11 @@ As we know, all apps that coders develop should include a README file to help, a
 
 3. The console is going to start prompting different questions about your project, some of which you will respond on the console and others will open the editor to allow the user to give more elaborated answers. To include images, make ordered or unordered lists, follow the syntaxis of markdown language. Save before closing the editor, that way the console will get the answer from the temp file.
 
-![Questions prompting](./images/editor_question.PNG)
+![Questions prompting](./images/Editor_Question.PNG)
 
 4. Once you finish answering all the questions, the console will log ‘Success! and the markdown file will be on the root file on the app.  You can do `explorer .` to open the file explorer and have access to the ‘README.md’ file
 
-![Final](./images/final.PNG)
+![Final](./images/Final.PNG)
 
 
 ## Tests
