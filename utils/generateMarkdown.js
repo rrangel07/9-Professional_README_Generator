@@ -57,7 +57,8 @@ function renderLicenseBadge(license) {
   (licenses.forEach((element) => (element.name === license) ? licenseBadge = element.badge  :
   'Not found'));
   return licenseBadge;
-}
+  }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -76,17 +77,13 @@ function renderLicenseSection(license) {
   const link= renderLicenseLink(license);
   return ((license === 'No License') 
   ? 
-`
-## License
+`## License
 
-This code is not protected under any License.
-`
+This code is not protected under any License.`
   : 
-`
-## License
+`## License
 
-This code is under ${license} license. In order to know what you can and can't do with this code, we recommend to visit the following link [${license}](${link}).
-`
+This code is under ${license} license. In order to know what you can and can't do with this code, we recommend to visit the following link [${license}](${link}).`
   )
 }
 
@@ -114,12 +111,20 @@ ${data.installation}
 
 ${data.usage}
 
+## Tests
+
+${data.tests}
+
 ## Credits
 
 ${data.contribuitors}
 
 ${renderLicenseSection(data.license)}
 
+## Questions
+
+You can contact me through email at ${data.email}.
+Also, through my [GitHub Profile](https://github.com/${data.github})
 `;
 }
 module.exports = {
