@@ -67,6 +67,6 @@ function init() {
             writeToFile('README.md',generateMarkdown.generateMarkdown(response));
         });
 }
-
+// .
 // Function call to initialize app
 init();
